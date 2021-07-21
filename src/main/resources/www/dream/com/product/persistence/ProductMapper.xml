@@ -15,6 +15,7 @@
 		<result property="productSize" column="p_size"></result>
 	</resultMap>
 	
+	
 	<resultMap type="www.dream.com.common.category.Category" id="cateMap">
 		<id property="categoryId" column="category_id"></id>
 		<result property="categoryName" column="category_name"></result>
@@ -53,6 +54,16 @@
      on dt.category_id = p.category_id
 	]]>		
 	</select>
+
+	<!-- public int registerProduct(ProductVO product); -->
+	<insert id="registerProduct">
+		insert
+			into s_products(p_id, category_id, quantity, p_name, price, p_size)
+		values(seq_product_id.nextval, #{categoryId}, #{quantity}, #{productName}, #{price}, #{productSize})
+	</insert>
+	
+
+	
 	
 
 </mapper>

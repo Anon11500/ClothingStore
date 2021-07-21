@@ -9,10 +9,10 @@ public interface ProductMapper {
 	
 	public List<ProductVO> getList();
 	
-	public List<Category> getCategories();
+	public List<Category>  getCategories();
 	
 	public List<ProductVO> getDetailCategory(Category cate);
 	
-	
+	public int registerProduct(ProductVO product); 
 
 }

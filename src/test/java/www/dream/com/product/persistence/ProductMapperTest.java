@@ -21,8 +21,7 @@ public class ProductMapperTest {
 	@Autowired
 	private ProductMapper productMapper;
 	
-	
-	//@Test
+	@Test
 	public void test000GetList() {
 		try {
 			productMapper.getList().forEach(p->{
@@ -33,9 +32,12 @@ public class ProductMapperTest {
 		}
 	}
 	
-	@Test
+	
+	
+	//@Test
 	public void test000GetCate() {
 		try {
+			System.out.println();
 			Category target = new Category(1);
 			List<ProductVO> tt = productMapper.getDetailCategory(target);
 			tt.forEach(t->{
